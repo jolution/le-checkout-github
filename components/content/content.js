@@ -37,6 +37,26 @@ window.onload = function () {
 
     logThis(`Der Button existiert: ${writable}`);
 
+    // Creating radio buttons
+    const radioContainer = document.createElement('div');
+    const prefixes = ['feature', 'fix', 'build', 'ci', 'docs', 'perf', 'refactor', 'style', 'test', 'chore', 'research'];
+
+    const select = document.createElement('select');
+    select.addEventListener('change', () => {
+        updateBranchName(select.value);
+    });
+
+    prefixes.forEach(prefix => {
+        const option = document.createElement('option');
+        option.value = prefix;
+        option.textContent = prefix;
+
+        // TODO: @raj please preselect the option based on the Github Issue Type ID
+        // option.selected = prefix === 'feature';
+
+        select.appendChild(option);
+    });
+
     // Doesn't need if we have rights to create a branch
     if (!writable) {
         const issueNumber = window.location.href.match(/\/issues\/(\d+)/)[1];
@@ -45,26 +65,7 @@ window.onload = function () {
         const titleElement = document.querySelector('.js-issue-title');
         const title = titleElement.textContent.trim();
 
-        // Creating radio buttons
-        const radioContainer = document.createElement('div');
-        const prefixes = ['feature', 'fix', 'build', 'ci', 'docs', 'perf', 'refactor', 'style', 'test', 'chore', 'research'];
-
-        const select = document.createElement('select');
-        select.addEventListener('change', () => {
-            updateBranchName(select.value);
-        });
-
-        prefixes.forEach(prefix => {
-            const option = document.createElement('option');
-            option.value = prefix;
-            option.textContent = prefix;
-
-            // TODO: @raj please preselect the option based on the Github Issue Type ID
-            // option.selected = prefix === 'feature';
-
-            select.appendChild(option);
-        });
-
+        // Add select field
         radioContainer.appendChild(select);
 
         // Formatting the branch name
@@ -117,6 +118,32 @@ window.onload = function () {
 
         // devStatusPanel.appendChild(containerElement);
         insertAfter(containerElement, sidebarContainer);
+    } else {
+
+        const parentElement = document.getElementById('partial-discussion-sidebar');
+
+        const observer = new MutationObserver((mutationsList) => {
+            mutationsList.forEach((mutation) => {
+                // Überprüfen Sie, ob das Formular hinzugefügt wurde
+                if (mutation.addedNodes) {
+                    for (let i = 0; i < mutation.addedNodes.length; i++) {
+                        const addedNode = mutation.addedNodes[i];
+                        if (addedNode instanceof HTMLElement && addedNode.matches('form[data-target="create-branch.form"]')) {
+
+                            const formInput = addedNode.querySelector('input[name="name"]');
+                            const formInputValue = formInput.textContent || formInput.value;
+
+                            // Add select field
+                            insertAfter(select, formInput);
+                        }
+                    }
+                }
+            });
+        });
+
+        observer.observe(parentElement, {childList: true, subtree: true});
+
+
     }
 
 }
