@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Browser Extension NAME",
+  "name": "Github Gitbranch Generator",
   "version": "1.0.0",
   "author": "@juliankasimir",
-  "description": "Browser Extension description",
+  "description": "Gitbranch Generator Browser Extension for Github Issues",
   "permissions": [
     "tabs",
     "activeTab",
@@ -20,7 +20,9 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://INSERT_URL_HERE/*"],
+      "matches": [
+        "https://github.com/*/issues/*"
+      ],
       "css": [
         "/components/content/content.css"
       ],
@@ -37,8 +39,8 @@
         "/components/content/content.js",
         "/components/content/content.css",
         "/components/content/inject.js",
-        "chrome-extension://INSERT_ID_HERE/content.js",
-        "chrome-extension://INSERT_ID_HERE/content.css"
+        "chrome-extension://eifofnljdklkhbodmfchllhppolpmkoa/content.js",
+        "chrome-extension://eifofnljdklkhbodmfchllhppolpmkoa/content.css"
       ],
       "matches": [
         "<all_urls>"
