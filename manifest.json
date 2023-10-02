@@ -36,9 +36,13 @@
   "web_accessible_resources": [
     {
       "resources": [
+        "/components/content/inject.js",
+        "/components/content/utils.js",
+        "/components/content/config.js",
         "/components/content/content.js",
         "/components/content/content.css",
-        "/components/content/inject.js",
+        "/components/content/translation.json",
+        "/components/content/language.js",
         "chrome-extension://eifofnljdklkhbodmfchllhppolpmkoa/content.js",
         "chrome-extension://eifofnljdklkhbodmfchllhppolpmkoa/content.css"
       ],

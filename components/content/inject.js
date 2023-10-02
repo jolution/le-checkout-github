@@ -1,9 +1,9 @@
 function injectScript(file_path, tag) {
-  var node = document.getElementsByTagName(tag)[0],
-      script = document.createElement('script');
-  script.setAttribute('type', 'text/javascript');
-  script.setAttribute('src', file_path);
-  node.appendChild(script);
+    const node = document.getElementsByTagName(tag)[0];
+    const script = document.createElement('script');
+    script.setAttribute('type', 'module');
+    script.setAttribute('src', file_path);
+    node.appendChild(script);
 }
 
 /*
@@ -16,12 +16,12 @@ function injectStyle(file_path, tag) {
 }*/
 
 function injectStyleRel(file_path, tag) {
-  var node = document.getElementsByTagName(tag)[0],
-      style = document.createElement('link');
-  style.setAttribute('rel', 'stylesheet');
-  style.setAttribute('type', 'text/css');
-  style.setAttribute('href', file_path);
-  node.appendChild(style);
+    const node = document.getElementsByTagName(tag)[0],
+        style = document.createElement('link');
+    style.setAttribute('rel', 'stylesheet');
+    style.setAttribute('type', 'text/css');
+    style.setAttribute('href', file_path);
+    node.appendChild(style);
 }
 
 // injectScript(chrome.extension.getURL('content.js'), 'body');
