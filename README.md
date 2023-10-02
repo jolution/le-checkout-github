@@ -1,6 +1,11 @@
 # Gitbranch Generator Browser Extension for Github Issues
 
-This is a browser extension that generates a git branch name based on the current date and time.
+This is a browser extension that generates a git branch name on the current github issue key and the issue
+
+## Screenshots
+
+![App Screenshot](screenshot.png)
+![App Screenshot](screenshot2.png)
 
 ## Installation
 
@@ -14,13 +19,15 @@ This is a browser extension that generates a git branch name based on the curren
 5. Open a new tab and open the company jira on promise ticket directly. On the right sidebar you will find the
    extension.
 
-### Firefox
-
-TODO: Add installation instructions for Firefox, if manifest.json works with firefox.
-
 ## Updating
 
 ### Chrome
 
 1. Open the Extension Management page by navigating to `chrome://extensions`.
 2. Click the **Update** button.
+
+### Authors (in alphabetical order)
+
+- [@juliankasimir](https://www.github.com/juliankasimir)
+- [@pimmok](https://www.github.com/pimmok)
+- [@raj19joshi](https://www.github.com/raj19joshi)
