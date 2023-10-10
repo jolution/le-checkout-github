@@ -1,7 +1,6 @@
-// import CONFIG from "./config.js";
-
 import {getTranslation} from './language.js';
 import {insertAfter, logThis} from "./utils.js";
+import config from "./config.js";
 
 const TRANSLATION = getTranslation();
 
@@ -29,20 +28,20 @@ window.onload = function () {
 
     // Creating radio buttons
     const radioContainer = document.createElement('div');
-    const prefixes = ['feature', 'fix', 'build', 'ci', 'docs', 'perf', 'refactor', 'style', 'test', 'chore', 'research'];
 
     const select = document.createElement('select');
 
-    prefixes.forEach(prefix => {
+    for (const prefix in config.BRANCH_PREFIXES) {
         const option = document.createElement('option');
         option.value = prefix;
-        option.textContent = prefix;
+        const emoji = config.BRANCH_PREFIXES[prefix];
+        option.textContent = `${emoji} ${prefix}`;
 
         // TODO: @raj please preselect the option based on the Github Issue Type ID
         // option.selected = prefix === 'feature';
 
         select.appendChild(option);
-    });
+    }
 
     // Doesn't need if we have rights to create a branch
     if (!writable) {
