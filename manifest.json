@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Github Gitbranch Generator",
+  "name": "LeCheckout for Github",
   "version": "1.0.0",
-  "author": "@juliankasimir",
+  "author": "@jolution",
   "description": "Gitbranch Generator Browser Extension for Github Issues",
   "permissions": [
     "tabs",
