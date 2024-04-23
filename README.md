@@ -3,6 +3,11 @@ _Gitbranch Generator Browser Extension_
 
 This is a browser extension that generates a git branch name on the current github issue key and the issue
 
+:package:
+If you use Jira (Cloud or On Premise)
+have a look at the [Jira Version](https://github.com/jolution/le-checkout-jira).
+
+
 ## Screenshots
 
 ![App Screenshot](screenshot.png)
