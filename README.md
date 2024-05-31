@@ -56,8 +56,8 @@ Why Use this Extension?
 ## ❓FAQ
 
 <details>
-<summary>Why do you include the Jira ID in the branch title?</summary>
-<p>This allows us to make assignments more easily and, among other things, work with jira-prepare-commit-msg in projects.</p>
+<summary>Why do you include the GitHub in the branch title?</summary>
+<p>This allows us to make assignments more easily.</p>
 </details>
 
 For more questions and answers, please visit our [Q&A Discussions](https://github.com/jolution/le-checkout-github/discussions/categories/q-a).
