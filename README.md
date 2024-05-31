@@ -85,17 +85,6 @@ We do not currently offer direct support for this project.
 - [@juliankasimir](https://www.github.com/juliankasimir)
 - [@pimmok](https://www.github.com/pimmok)
 
-## 🤝 Contributors
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
 ## 💎 Sponsor
 
 Many thanks to JetBrains, which provided us with a yearly license for all their programs for the open source work on this project.
@@ -109,3 +98,17 @@ See the [LICENSE](LICENSE) file for details.
 ## ℹ️ Disclaimer
 
 Please note that this project, LeCheckout, is not officially associated with or endorsed by the Monkey Island franchise, its creators, or any related entities. It is an independent project developed by the open-source community and does not claim any rights to the Monkey Island trademark or any related materials.
+
+## ✨ Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
