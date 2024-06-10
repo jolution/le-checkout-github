@@ -87,14 +87,24 @@ We do not currently offer direct support for this project.
 - Rolling out to Chrome Store
 - Creating the extension for Firefox
 
-### ✍️ Authors (in alphabetical order)
+## ✍️ Authors (in alphabetical order)
 
 - [@juliankasimir](https://www.github.com/juliankasimir)
 - [@pimmok](https://www.github.com/pimmok)
 
-## 💎 Sponsor
+## 💎 Sponsor (in alphabetical order)
 
-Many thanks to JetBrains, which provided us with a yearly license for all their programs for the open source work on this project.
+### Eviden
+
+We appreciate the support from [Eviden](https://eviden.com), helping us continue our open source work.
+
+<img style="max-width: 100px" width="100" src="https://raw.githubusercontent.com/DE-AMS-AD-VAPPS/brand/main/assets/eviden-logo.svg" alt="Eviden logo.">
+
+---
+
+### JetBrains
+
+Many thanks to [JetBrains](https://jetbrains.com), which provided us with a yearly license for all their programs for the open source work on this project.
 
 <img style="max-width: 50px" width="50" src="https://resources.jetbrains.com/storage/products/company/brand/logos/WebStorm_icon.png" alt="WebStorm logo.">
 
