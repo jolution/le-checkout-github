@@ -36,15 +36,13 @@
   "web_accessible_resources": [
     {
       "resources": [
+        "/components/config.js",
         "/components/content/inject.js",
         "/components/content/utils.js",
-        "/components/content/config.js",
         "/components/content/content.js",
         "/components/content/content.css",
-        "/components/content/translation.json",
-        "/components/content/language.js",
-        "chrome-extension://eifofnljdklkhbodmfchllhppolpmkoa/content.js",
-        "chrome-extension://eifofnljdklkhbodmfchllhppolpmkoa/content.css"
+        "/components/content/translation.js",
+        "/components/content/language.js"
       ],
       "matches": [
         "<all_urls>"

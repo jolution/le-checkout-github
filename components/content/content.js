@@ -1,10 +1,8 @@
-import {getTranslation} from './language.js';
-import {insertAfter, logThis} from "./utils.js";
-import config from "./config.js";
+import CONFIG from "../config.js";
+import TRANSLATION from "./language.js";
+import { insertAfter, logThis } from "./utils.js";
 
-const TRANSLATION = getTranslation();
-
-// check and limit the maximum length of text
+// check and limit the maximum length of a text
 function checkMaxLength(text) {
     return text.length > 255 ? text.slice(0, 255) : text;
 }
@@ -24,17 +22,17 @@ window.onload = function () {
     const buttonCreateBranch = document.querySelector('button[data-action="click:create-branch#openDialog"][data-view-component="true"]');
     const writable = !!buttonCreateBranch;
 
-    logThis(`Der Button existiert: ${writable}`);
+    logThis(`Button exist: ${writable}`);
 
     // Creating radio buttons
     const radioContainer = document.createElement('div');
 
     const select = document.createElement('select');
 
-    for (const prefix in config.BRANCH_PREFIXES) {
+    for (const prefix in CONFIG.BRANCH_PREFIXES) {
         const option = document.createElement('option');
         option.value = prefix;
-        const emoji = config.BRANCH_PREFIXES[prefix];
+        const emoji = CONFIG.BRANCH_PREFIXES[prefix];
         option.textContent = `${emoji} ${prefix}`;
 
         // TODO: @raj please preselect the option based on the Github Issue Type ID
@@ -43,7 +41,7 @@ window.onload = function () {
         select.appendChild(option);
     }
 
-    // Doesn't need if we have rights to create a branch
+    // Doesn't need it if we have rights to create a branch
     if (!writable) {
         const issueNumber = window.location.href.match(/\/issues\/(\d+)/)[1];
 
