@@ -16,7 +16,7 @@ function approveValidGitBranchName(branchName) {
     return checkMaxLength(sanitizedBranchName);
 }
 
-window.onload = function () {
+window.onload = () => {
     logThis("Page fully loaded");
 
     const buttonCreateBranch = document.querySelector('button[data-action="click:create-branch#openDialog"][data-view-component="true"]');
@@ -26,7 +26,6 @@ window.onload = function () {
 
     // Creating radio buttons
     const radioContainer = document.createElement("div");
-
     const select = document.createElement("select");
 
     for (const prefix in CONFIG.BRANCH_PREFIXES) {
@@ -110,25 +109,25 @@ window.onload = function () {
         const parentElement = document.getElementById("partial-discussion-sidebar");
 
         const observer = new MutationObserver((mutationsList) => {
-            mutationsList.forEach((mutation) => {
-                // Überprüfen Sie, ob das Formular hinzugefügt wurde
+            // mutationsList.forEach((mutation) => {
+            for (const mutation of mutationsList) {
                 if (mutation.addedNodes) {
                     for (let i = 0; i < mutation.addedNodes.length; i++) {
                         const addedNode = mutation.addedNodes[i];
                         if (addedNode instanceof HTMLElement && addedNode.matches('form[data-target="create-branch.form"]')) {
                             const formInput = addedNode.querySelector('input[name="name"]');
                             const formInputValue = formInput.textContent || formInput.value;
-                            formInput.value = select[0].value + "/" + formInputValue;
+                            formInput.value = `${select[0].value}/${formInputValue}`;
 
                             // Add select field
                             insertAfter(select, formInput);
                             select.addEventListener("change", () => {
-                                formInput.value = select.value + "/" + formInputValue;
+                                formInput.value = `${select.value}/${formInputValue}`;
                             });
                         }
                     }
                 }
-            });
+            }
         });
 
         observer.observe(parentElement, { childList: true, subtree: true });
