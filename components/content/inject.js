@@ -16,8 +16,8 @@ function injectStyle(file_path, tag) {
 }*/
 
 function injectStyleRel(file_path, tag) {
-    const node = document.getElementsByTagName(tag)[0],
-        style = document.createElement('link');
+    const node = document.getElementsByTagName(tag)[0];
+    const style = document.createElement('link');
     style.setAttribute('rel', 'stylesheet');
     style.setAttribute('type', 'text/css');
     style.setAttribute('href', file_path);
