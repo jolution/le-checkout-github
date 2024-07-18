@@ -12,23 +12,23 @@ const LOG_LEVEL = {
 };
 
 const BRANCH_PREFIXES = {
-    'feature': '🍕',
-    'fix': '🐛',
-    'docs': '📝',
-    'style': '🎨',
-    'refactor': '🔨',
-    'build': '🤖️',
-    'ci': '🔁',
-    'perf': '⚡',
-    'test': '✅',
-    'chore': '📦',
-    'research': '🔍'
+    feature: "🍕",
+    fix: "🐛",
+    docs: "📝",
+    style: "🎨",
+    refactor: "🔨",
+    build: "🤖️",
+    ci: "🔁",
+    perf: "⚡",
+    test: "✅",
+    chore: "📦",
+    research: "🔍",
 };
 
 const CONFIG = {
     LOG_LEVEL: LOG_LEVEL.NONE,
-    LOG_IDENTIFIER: '[LE_CHECKOUT]',
-    BRANCH_PREFIXES: BRANCH_PREFIXES
+    LOG_IDENTIFIER: "[LE_CHECKOUT]",
+    BRANCH_PREFIXES: BRANCH_PREFIXES,
 };
 
 export default CONFIG;
